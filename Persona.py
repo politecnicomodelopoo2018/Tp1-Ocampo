@@ -1,3 +1,5 @@
+from datetime import *
+
 class Persona (object):
     nombre = None
     apellido = None

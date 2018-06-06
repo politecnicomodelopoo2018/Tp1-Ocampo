@@ -1,3 +1,5 @@
+from Persona import *
+
 class Vuelos (object):
     avion = None
     origen = None
