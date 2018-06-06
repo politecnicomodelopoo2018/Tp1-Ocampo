@@ -3,7 +3,7 @@ class avion(object):
     cantpasajeros =None
     canttrip = None
 
-    def SetModelo (self, modelo):sasdasd
+    def SetModelo (self, modelo):
         self.modelo = modelo
 
 
