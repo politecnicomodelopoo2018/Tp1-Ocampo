@@ -17,9 +17,6 @@ class Persona (object):
         self.fechanaci = fechanaci
 
 
-class Piloto (Persona):
-    pass
-
 class Pasajero (Persona):
     vip = None
     atencionesp= None
@@ -29,3 +26,18 @@ class Pasajero (Persona):
 
     def SetAtencionesp (self,atencionesp):
         self.atencionesp = atencionesp
+
+
+class Tripulacion(Persona):
+    def __init__(self):
+        self.listAviones = []
+
+
+class Piloto (Tripulacion):
+    pass
+
+
+class Azafatas(Tripulacion):
+    def __init__(self):
+        super().__init__()
+        self.listIdomas = []
