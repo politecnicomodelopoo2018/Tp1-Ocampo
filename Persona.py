@@ -35,6 +35,12 @@ class Tripulacion(Persona):
         self.listAviones = []
 
 
+    def setListAviones (self, listAviones):
+        self.listAviones = listAviones
+
+    def addAviones (self, avion):
+        self.listAviones.append(avion)
+
 class Piloto (Tripulacion):
     pass
 

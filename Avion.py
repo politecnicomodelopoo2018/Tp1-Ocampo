@@ -13,3 +13,9 @@ class avion(object):
 
     def SetCanttrip (self, canttrip):
         self.canttrip = canttrip
+
+#recuperando info del json(descerializar)
+    def descerializacion (self, diccionario):
+        self.setmodelo(diccionario["codigoUnico"])
+        self.setcantpasajeros(diccionario["cantidadDePasajerosMaxima"])
+        self.setcanttrip(diccionario["cantidadDeTripulacionNecesaria"])
