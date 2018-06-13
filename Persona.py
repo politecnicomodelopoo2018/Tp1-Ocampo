@@ -18,6 +18,11 @@ class Persona (object):
     def SetFechanac (self, fechanaci):
         self.fechanaci = fechanaci
 
+    def descerializacion (self, diccionario, listAviones):
+        self.setNombre(diccionario["nombre"])
+        self.setApellido(diccionario["apellido"])
+        self.setDni(diccionario["dni"])
+        self.setFechanaci(diccionario["fechaNacimiento"])
 
 class Pasajero (Persona):
     vip = None
