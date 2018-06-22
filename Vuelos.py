@@ -70,9 +70,11 @@ class Vuelos (object):
 
 
     def pasajeroMasJoven (self):
-        self.listPasajeros = [0]
+        pasajero= self.listPasajeros = [0]
         for item in self.listPasajeros:
-            if item.fechanaci > self.listPasajeros.fechanaci:
+            if item.fechanaci > pasajero.fechanaci:
+                pasajero = item
+            return pasajero
 
 
 
