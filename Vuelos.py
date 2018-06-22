@@ -56,3 +56,24 @@ class Vuelos (object):
                                              self.addTripulante(item2)
 
 
+    def verificarTripulacion (self, Tripulacion):
+        for item in Tripulacion.listAviones:
+            if item.modelo == self.avion.modelo:
+                return True
+        return False
+
+    def validandoTripulacion (self):
+        for item in self.listTripu:
+            if not self.verificarTripulacion(item):
+                return False
+        return True
+
+
+    def pasajeroMasJoven (self):
+        self.listPasajeros = [0]
+        for item in self.listPasajeros:
+            if item.fechanaci > self.listPasajeros.fechanaci:
+
+
+
+
