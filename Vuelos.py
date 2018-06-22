@@ -38,3 +38,21 @@ class Vuelos (object):
     def AddTripulacion (self, Tripulacion):
         self.listTripu.append(Tripulacion)
 
+    def descerializacion (self, diccionario, listPersonas, listPasajeros):
+       for item in listAviones:
+            if dict["avion"] == item.modelo:
+                self.avion = item
+                self.setFecha(datetime.strptime(diccionario["fecha"], "%Y-%m-%d"))
+                self.setHora(diccionario["hora"])
+                self.setDestino(diccionario["destino"])
+                self.setOrigen(diccionario["origen"])
+                for item in diccionario["pasajeros"]:
+                        for item2 in listaPersonas:
+                            if type(item2) is Pasajero and item == item2.dni:
+                             self.addPasajero(item2)
+                             for item in dict["tripulacion"]:
+                                    for item2 in listaPersonas:
+                                        if ((type(item2) is Piloto) or (type(item2) is Servicio)) and item == item2.dni:
+                                             self.addTripulante(item2)
+
+
