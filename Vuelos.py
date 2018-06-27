@@ -77,6 +77,12 @@ class Vuelos (object):
                 masjoven = item
             return masjoven
 
+#3
+    def MinimaTripulacion(self):
+        if len(self.listTripu) < avion.canttrip:
+            return false
+        return true
+
 
 #7
     def idomas (self):

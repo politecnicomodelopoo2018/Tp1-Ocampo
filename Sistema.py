@@ -30,20 +30,20 @@ class Sistema(object):
         self.listAviones = listAviones
         self.listPersona = listPersona
 
-    def FechasDePiloto (self, piloto):
-        listFechaVuelos = []
-
+#5
+    def FechasPorTripulacion (self, Tripulacion):
+        listFechas = []
         for item in self.listVuelos:
             for item2 in item.listTripu:
-                if item2 == piloto:
-                    listFechaVuelos.append(item.fecha)
-                return listFechaVuelos
+                if Tripulacion == item2.dni:
+                    listFechas.append(item.fecha)
+                    return listFechas
 
 
-    def DiasDelPiloto(self, Piloto):
-        for item in self.FechasDePiloto(Piloto):
-            fecha = 0
-            for item2 in self.FechasDePiloto(Piloto):
+    def DiasTripulacion(self, Tripulacion):
+        fecha = 0
+        for item in self.FechasPorTripulacion():
+            for item2 in self.FechasPorTripulacion():
                 if item == item2:
                     fecha += 1
                     if fecha == 2:
