@@ -5,7 +5,7 @@ class Persona (object):
     apellido = None
     dni = None
     fechanaci = None
-
+#setts
     def SetNombre (self, nombre):
         self.nombre = nombre
 
@@ -29,17 +29,20 @@ class Persona (object):
 class Pasajero (Persona):
     vip = None
     atencionesp= None
-
+#sets
     def SetVip (self, vip):
         self.vip = vip
 
     def SetAtencionesp (self,atencionesp):
         self.atencionesp = atencionesp
 
-    def descerializacion (self, diccionario, listaAviones):
-        
+    def descerializacion (self, diccionario, listAviones):
+
+
+
         
 class Tripulacion(Persona):
+
     def __init__(self):
         self.listAviones = []
 
@@ -51,12 +54,8 @@ class Tripulacion(Persona):
         self.listAviones.append(avion)
         
     def descerializacion (self, diccionario, listAviones):
-        
 
-        
-        
-class Piloto (Tripulacion):
-    pass
+
 
 
 class Azafatas(Tripulacion):
@@ -64,14 +63,16 @@ class Azafatas(Tripulacion):
         super().__init__()
         self.listIdomas = []
         
-    def addListIdioma (self,listaIdomas):
-        self.listaIdomas = listaIdomas
+    def addListIdioma (self, listIdomas):
+        self.listaIdomas = listIdomas
         
     def addIdioma (self, idioma):
         self.listaIdiomas.append(idioma)
         
-    def descerializacion (self, diccionario, listaAviones):
-        
-        
-        
-         
+    def descerializacion (self, diccionario, listAviones):
+
+
+
+
+class Piloto (Tripulacion):
+    pass

@@ -3,6 +3,7 @@ from Vuelos import *
 from datetime import *
 
 class Sistema(object):
+
     def __init__(self):
         self.listPersona = []
         self.listVuelos = []
@@ -18,18 +19,18 @@ class Sistema(object):
     def SetListAviones (self, listAviones):
         self.listAviones = listAviones
 
-    def addPersona(self, persona):
+    def addPersona (self, persona):
         self.listPersona.append(persona)
 
     def addVuelo (self, vuelo):
         self.listVuelos.append(vuelo)
 
-    def Cargartodo (self, listVuelos, listAviones, listPersona):
+    def CargarList (self, listVuelos, listAviones, listPersona):
         self.listVuelos = listVuelos
         self.listAviones = listAviones
         self.listPersona = listPersona
 
-    def FechasPorPiloto (self, piloto):
+    def FechasDePiloto (self, piloto):
         listFechaVuelos = []
 
         for item in self.listVuelos:
@@ -39,10 +40,10 @@ class Sistema(object):
                 return listFechaVuelos
 
 
-    def verificarDiasPiloto(self, piloto):
-        for item in self.FechasPorPiloto(piloto):
+    def DiasDelPiloto(self, Piloto):
+        for item in self.FechasDePiloto(Piloto):
             fecha = 0
-            for item2 in self.FechasPorPiloto(piloto):
+            for item2 in self.FechasDePiloto(Piloto):
                 if item == item2:
                     fecha += 1
                     if fecha == 2:

@@ -6,6 +6,7 @@ class Vuelos (object):
     destino = None
     fecha = None
     hora = None
+
     def __init__(self):
         listTripu = []
         listPasajeros = []
@@ -33,27 +34,27 @@ class Vuelos (object):
 
 #Adds
     def AddPasajero (self, pasajero):
-        self.listaPasajeros.append(pasajero)
+        self.listPasajeros.append(pasajero)
 
     def AddTripulacion (self, Tripulacion):
         self.listTripu.append(Tripulacion)
 
-    def descerializacion (self, diccionario, listPersonas, listPasajeros):
+    def descerializacion (self, diccionario):
        for item in listAviones:
-            if dict["avion"] == item.modelo:
+            if diccionario["avion"] == item.modelo:
                 self.avion = item
                 self.setFecha(datetime.strptime(diccionario["fecha"], "%Y-%m-%d"))
                 self.setHora(diccionario["hora"])
                 self.setDestino(diccionario["destino"])
                 self.setOrigen(diccionario["origen"])
                 for item in diccionario["pasajeros"]:
-                        for item2 in listaPersonas:
-                            if type(item2) is Pasajero and item == item2.dni:
+                    for item2 in listPersonas:
+                        if type(item2) is Pasajero and item == item2.dni:
                              self.addPasajero(item2)
                              for item in dict["tripulacion"]:
-                                    for item2 in listaPersonas:
-                                        if ((type(item2) is Piloto) or (type(item2) is Servicio)) and item == item2.dni:
-                                             self.addTripulante(item2)
+                                 for item2 in listPersonas:
+                                     if ((type(item2) is Piloto) or (type(item2) is Servicio)) and item == item2.dni:
+                                          self.addTripulante(item2)
 
 
     def verificarTripulacion (self, Tripulacion):
@@ -68,14 +69,22 @@ class Vuelos (object):
                 return False
         return True
 
-
-    def pasajeroMasJoven (self):
-        pasajero = self.listPasajeros = [0]
+#2
+    def Joven (self):
+        masjoven = self.listPasajeros = [0]
         for item in self.listPasajeros:
-            if item.fechanaci > pasajero.fechanaci:
-                pasajero = item
-            return pasajero
+            if item.fechanaci > masjoven.fechanaci:
+                masjoven = item
+            return masjoven
 
 
+#7
+    def idomas (self):
+        lenguaje = []
+        for item in listTripu:
+            if type(item) is Azafatas:
+                for item2 in item.listIdiomas:
+                    lenguaje.append (item2)
+                return lenguaje
 
 
