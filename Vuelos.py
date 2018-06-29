@@ -58,6 +58,7 @@ class Vuelos (object):
                    self.listTripu.append(item2)
 
 
+
    def ModelosTripulacion (self, Tripulacion):
        for item in Tripulacion.listAviones:
            if item.modelo == self.avion.modelo:

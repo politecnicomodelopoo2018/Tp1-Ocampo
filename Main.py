@@ -145,7 +145,7 @@ for item in listPersonas:
        if s.DiasTripulacion(item):
            print(item.nombre,  item.apellido,  item.dni)
 
-print("\n-------------------------------------------------")
+print("\n--------------------------------------------------")
 print("Personas no validas por ya haber volado")
 for item in listPersonas:
    if type(item) is Azafatas or type(item) is Piloto:

@@ -10,6 +10,7 @@ class Sistema(object):
         self.listAviones = []
 
 
+
     def SetListPerson (self, listPersona):
         self.listPersona = listPersona
 

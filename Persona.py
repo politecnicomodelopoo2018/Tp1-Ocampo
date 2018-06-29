@@ -63,6 +63,7 @@ class Tripulacion(Persona):
                     self.addAviones(item2)
 
 
+
 class Azafatas(Tripulacion):
     def __init__(self):
         super().__init__()
