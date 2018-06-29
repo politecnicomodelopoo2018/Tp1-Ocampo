@@ -1,4 +1,4 @@
-class avion(object):
+class Avion(object):
     modelo = None
     cantpasajeros =None
     canttrip = None
@@ -16,6 +16,7 @@ class avion(object):
 
 #recuperando info del json(descerializar)
     def descerializacion (self, diccionario):
-        self.setmodelo(diccionario["codigoUnico"])
-        self.setcantpasajeros(diccionario["cantidadDePasajerosMaxima"])
-        self.setcanttrip(diccionario["cantidadDeTripulacionNecesaria"])
+        self.modelo = (diccionario["codigoUnico"])
+        self.cantpasajeros = (diccionario["cantidadDePasajerosMaxima"])
+        self.canttrip = (diccionario["cantidadDeTripulacionNecesaria"])
+

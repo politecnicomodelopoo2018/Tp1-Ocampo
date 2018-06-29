@@ -35,15 +35,15 @@ class Sistema(object):
         listFechas = []
         for item in self.listVuelos:
             for item2 in item.listTripu:
-                if Tripulacion == item2.dni:
+                if Tripulacion.dni == item2.dni:
                     listFechas.append(item.fecha)
-                    return listFechas
+            return listFechas
 
 
     def DiasTripulacion(self, Tripulacion):
-        fecha = 0
-        for item in self.FechasPorTripulacion():
-            for item2 in self.FechasPorTripulacion():
+        for item in self.FechasPorTripulacion(Tripulacion):
+            fecha = 0
+            for item2 in self.FechasPorTripulacion(Tripulacion):
                 if item == item2:
                     fecha += 1
                     if fecha == 2:
