@@ -37,7 +37,7 @@ class Sistema(object):
             for item2 in item.listTripu:
                 if Tripulacion.dni == item2.dni:
                     listFechas.append(item.fecha)
-            return listFechas
+        return listFechas
 
 
     def DiasTripulacion(self, Tripulacion):
